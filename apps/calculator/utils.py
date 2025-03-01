@@ -45,7 +45,6 @@ def analyze_image(img: Image, dict_of_vars: dict):
     except Exception as e:
         print(f"Error parsing the response: {e}")
 
-    print(answers)
     for answer in answers:
         answer['assign'] = 'assign' in answer
 

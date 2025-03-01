@@ -27,5 +27,5 @@ async def health():
 
 app.include_router(calculator_router, prefix="/calculate", tags=["calculate"])
 
-if __name__ == "__main__":
+if ENV == "dev" and __name__ == "__main__":
     uvicorn.run("main:app", host=SERVER_URL, port=(PORT), reload=(ENV == "dev"))
